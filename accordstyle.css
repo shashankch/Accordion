@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  /* background-color: #100e17; */
+  background-image: linear-gradient(#ea3f5d, #f46430);
+}
+
+.accord-main {
+  padding: 20px;
+}
+
+label {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.accord-item {
+    padding: 10px;  
+  /* width: 75vw; */
+  box-sizing: border-box;
+  /* height: 60px; */
+  color: black;
+  display: block;
+  background-color: #a3cb37;
+  border: 1px solid #100e17;
+  position: relative;
+}
+
+.accord-item label::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  /* display: inline-block; */
+  padding: 3px;
+
+  transform: rotate(-45deg);
+}
+
+.accord-content {
+  margin: 5px;
+  display: none;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  line-height: 1.5rem;
+  word-spacing: 0.2rem;
+}
+
+.accord-link {
+  display: block;
+}
+
+.accord-link {
+  display: none;
+  /* transition: height 2s ease 1s; */
+  transition: height 10s ease-out;
+  opacity: 0;
+  height: 0;
+}
+
+.accord-link:checked ~ .accord-content {
+  opacity: 1;
+  display: block;
+  /* height:60px; */
+  /* max-height: 50vh; */
+}
+
+.accord-link:checked ~ label::before {
+  transform: rotate(45deg);
+}
+
+/* .accord-item:target .accord-content .content {
+
+    display: block;
+
+    max-height: 50vh;
+    transition: height 1s ease;
+
+} */
